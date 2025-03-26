@@ -1,51 +1,37 @@
-""" import json
+import json
+mode = input("Are you a techer or a studient? Type answer in t or s:")
 
-class flashcards:
-    def __init__(self, question, answer):
-        self.question = question
-        self.answer = answer
+class teachers():
+    def make_flashcards():
+        p = {}
+        while True:
+            a = input("Do you want to make a question? Answer Yes or No:")
+            if a.lower() == "yes":
+                question = input("What is your question kid? Type question:")
+                answer = input("What is your answer to this question big guy? Type answer:")
+                p[question] = answer
+            elif a.lower() == "no":
+                for i in range(0, 100):
+                    print("GEEEEEEEEEEEEEETTTTTTTT OUUUUUUUUUUTTTT")
+                break
+            else:
+                print("lck da hl n twin, time to stoooooooooooooooooooddddy for AP reeeerick.")
+                print("Y u steal no stooody, no ricse fo u toonite")
+        with open("FlashCards.json", "w") as file:
+            json.dump(p, file, indent=4)
 
-    def display(self):
-        print(self.question, self.answer)
+class studient():
+    def stuient_game():
+        sthrek = 0
+        poent = 0
+        corrrrret = 0
+        with open("FlashCards.json", "r") as fs:
+            json.load(fs)
 
-class teachers(flashcards):
-    def __init__(self, question, answer):
-        
-
-class Studient:
-    def __init__(self, streak, points):
-
-teacher_or_student = input("techer or studnet mode(t or s):")
-if teacher_or_student == "t":
-    teacher.teachers()
-elif teacher_or_student == "s":
-    student.Studient()
-else: print("Error") """
-
-cars = [
-    Car("Toyota", "Camry", 2023, "camry_image.jpg"),
-    Car("Honda", "Civic", 2022, "civic_image.jpg"),
-    Car("Ford", "Mustang", 2021, "mustang_image.jpg")
-]
-
-# Convert objects to dictionaries
-cars_data = [car.to_dict() for car in cars]
-
-# Save to a JSON file
-with open("cars.json", "w") as file:
-    json.dump(cars_data, file, indent=4)
-new_car = Car("Chevrolet", "Malibu", 2024, "malibu_image.jpg")
-
-# Load existing data
-try:
-    with open("cars.json", "r") as file:
-        cars_data = json.load(file)
-except FileNotFoundError:
-    cars_data = []
-
-# Append new car
-cars_data.append(new_car.to_dict())
-
-# Save updated data back to file
-with open("cars.json", "w") as file:
-    json.dump(cars_data, file, indent=4)
+if mode.lower() == "t":
+    teachers.make_flashcards()
+elif mode.lower()== "s":
+    studient.studient_game()
+else:
+    for i in range(0, 10):
+        print("I gv u so ezy nstrukshuns, y u so dum")
