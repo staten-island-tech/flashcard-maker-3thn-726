@@ -21,17 +21,41 @@ class teachers():
             json.dump(p, file, indent=4)
 
 class studient():
-    def stuient_game():
+    def stuient_card():
         sthrek = 0
         poent = 0
         corrrrret = 0
         with open("FlashCards.json", "r") as fs:
-            json.load(fs)
+            flashcards = json.load(fs)
+        for card in flashcards:
+            print(card)
+            a = input("Wat da anser?:")
+            if a == flashcards[card]:
+                poent = poent + 1
+                sthrek = sthrek + 1
+                print("correct")
+                print("points:", poent)
+                print("shrek:", sthrek)
+                corrrrret = corrrrret + 1
+                print("Corrrrrect answers so far:", corrrrret)
+                if sthrek > 5:
+                    poent = poent + 1
+            else:
+                print("u dum dum")
+                sthrek = sthrek - sthrek
+                quit = input("do u wanna to reset?:")
+                if quit.lower == ("yes"):
+                    sthrek = 0
+                    poent = 0
+                    corrrrret = 0
+                    
+
+                
 
 if mode.lower() == "t":
     teachers.make_flashcards()
 elif mode.lower()== "s":
-    studient.studient_game()
+    studient.stuient_card()
 else:
-    for i in range(0, 10):
+    for i in range(0, 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000):
         print("I gv u so ezy nstrukshuns, y u so dum")
