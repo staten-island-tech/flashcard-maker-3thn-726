@@ -42,7 +42,7 @@ class studient():
                     poent = poent + 1
             else:
                 print("u dum dum")
-                sthrek = sthrek - sthrek
+                sthrek = 0
                 quit = input("do u wanna to reset?:")
                 if quit.lower == ("yes"):
                     sthrek = 0
@@ -57,5 +57,5 @@ if mode.lower() == "t":
 elif mode.lower()== "s":
     studient.stuient_card()
 else:
-    for i in range(0, 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000):
+    for i in range(0, 10000000000000000000000000000000000000000000000000000000000):
         print("I gv u so ezy nstrukshuns, y u so dum")
