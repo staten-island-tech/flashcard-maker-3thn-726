@@ -30,8 +30,8 @@ class studient():
         for card in flashcards:
             print(card)
             a = input("Wat da anser?:")
-            if a == flashcards[card]:
-                poent = poent + 1
+            if a == flashcards[card]:,n 
+01                poent = poent + 1
                 sthrek = sthrek + 1
                 print("correct")
                 print("points:", poent)
